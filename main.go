@@ -80,9 +80,9 @@ func GetWeather(lat string ,lon string) string {
     baseUrl := "http://api.openweathermap.org/data/2.5/weather?"
 
     // query
-    values.Add("appid", "749ab49f9cedd6f2a3fa3d8e9dba929e")    // OpenWeatherのAPIKey
-    values.Add("lat", lat)     // 緯度（石川県野々市市）
-    values.Add("lon", lon)    // 経度(石川県野々市市)
+    values.Add("appid", "")    // OpenWeatherのAPIKey
+    values.Add("lat", lat)
+    values.Add("lon", lon)
 
     weather := ParseJson(baseUrl + values.Encode())
     return weather
